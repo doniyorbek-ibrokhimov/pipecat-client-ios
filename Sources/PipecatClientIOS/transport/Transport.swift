@@ -3,7 +3,7 @@ import Foundation
 /// An RTVI transport.
 @MainActor
 public protocol Transport {
-    init(options: RTVIClientOptions, videoRecorder: VideoRecorderDelegate)
+    init(options: RTVIClientOptions, videoRecorder: VideoRecorderDelegate, modelConfig: Encodable, apiKey: String)
     var delegate: RTVIClientDelegate? { get set }
     var onMessage: ((RTVIMessageInbound) -> Void)? { get set }
     
